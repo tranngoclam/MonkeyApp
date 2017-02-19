@@ -1,0 +1,10 @@
+ext {
+  versions = [
+      butterknife: "8.5.1"
+  ]
+
+  libraries = [
+      butterknife: "com.jakewharton:butterknife:${versions.butterknife}",
+      butterknifeCompiler: "com.jakewharton:butterknife-compiler:${versions.butterknife}"
+  ]
+}

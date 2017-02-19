@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+>
+
+  <TextView
+      android:id="@+id/tvTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="36dp"
+      android:text="Chọn ngày sinh"
+  />
+
+  <NumberPicker
+      android:id="@+id/npMonth"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toLeftOf="@+id/npDate"
+      android:layout_toStartOf="@+id/npDate"
+      android:layout_alignBottom="@+id/npDate"
+      android:descendantFocusability="blocksDescendants"
+  />
+
+  <NumberPicker
+      android:id="@+id/npDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvTitle"
+      android:layout_centerHorizontal="true"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="20dp"
+      android:descendantFocusability="blocksDescendants"
+  />
+
+  <NumberPicker
+      android:id="@+id/npYear"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@+id/npDate"
+      android:layout_toEndOf="@+id/npDate"
+      android:layout_alignBottom="@+id/npDate"
+      android:descendantFocusability="blocksDescendants"
+  />
+
+  <Button
+      android:id="@+id/btFinish"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@id/npDate"
+      android:layout_marginTop="24dp"
+      android:text="Hoàn tất"
+  />
+</RelativeLayout>
