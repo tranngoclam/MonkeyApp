@@ -4,6 +4,7 @@ apply from: '../dependencies.gradle'
 android {
   compileSdkVersion 25
   buildToolsVersion "25.0.1"
+
   defaultConfig {
     applicationId "com.tuyenmonkey.monkeyapp"
     minSdkVersion 14
@@ -12,10 +13,25 @@ android {
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
+
   buildTypes {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+
+    debug {
+      debuggable true
+    }
+  }
+
+  productFlavors {
+    dev {
+      applicationId "com.tuyenmonkey.monkeyapp.dev"
+    }
+
+    prod {
+      applicationId "com.tuyenmonkey.monkeyapp"
     }
   }
 }
