@@ -1,10 +1,36 @@
 ext {
-  versions = [
-      butterknife: "8.5.1"
+  version = [
+      androidSupport: "25.1.0",
+      dagger: "2.8",
+      javaxAnnotation: "1.0",
+      butterknife: "8.5.1",
+      reactiveX: "2.0.1",
+      retrofit: "2.1.0",
+      okhttp: "3.6.0",
+      rxJavaAdapter2: "1.0.0",
+
+      junit: "4.12"
   ]
 
   libraries = [
-      butterknife: "com.jakewharton:butterknife:${versions.butterknife}",
-      butterknifeCompiler: "com.jakewharton:butterknife-compiler:${versions.butterknife}"
+      appCompat: "com.android.support:appcompat-v7:${version.androidSupport}",
+
+      dagger: "com.google.dagger:dagger:${version.dagger}",
+      daggerCompiler: "com.google.dagger:dagger-compiler:${version.dagger}",
+      javaxAnnotation: "javax.annotation:jsr250-api:${version.javaxAnnotation}",
+
+      butterknife: "com.jakewharton:butterknife:${version.butterknife}",
+      butterknifeCompiler: "com.jakewharton:butterknife-compiler:${version.butterknife}",
+
+      rxJava: "io.reactivex.rxjava2:rxjava:${version.reactiveX}",
+      rxAndroid: "io.reactivex.rxjava2:rxandroid:${version.reactiveX}",
+
+      retrofit: "com.squareup.retrofit2:retrofit:${version.retrofit}",
+      converterGson: "com.squareup.retrofit2:converter-gson:${version.retrofit}",
+      rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${version.rxJavaAdapter2}",
+      okhttp: "com.squareup.okhttp3:okhttp:${version.okhttp}",
+      loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${version.okhttp}",
+
+      junit: "junit:junit:${version.junit}"
   ]
 }

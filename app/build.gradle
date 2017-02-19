@@ -23,15 +23,28 @@ android {
 def libraries = ext.libraries
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-  compile 'com.android.support:appcompat-v7:25.1.0'
-  testCompile 'junit:junit:4.12'
+
+  compile "${libraries.appCompat}"
+
+  compile "${libraries.dagger}"
+  annotationProcessor "${libraries.daggerCompiler}"
+  provided "${libraries.javaxAnnotation}"
 
   compile "${libraries.butterknife}"
   annotationProcessor "${libraries.butterknifeCompiler}"
 
-  compile 'com.google.dagger:dagger:2.8'
-  annotationProcessor 'com.google.dagger:dagger-compiler:2.8'
+  compile "${libraries.rxJava}"
+  compile "${libraries.rxAndroid}"
+
+  compile "${libraries.retrofit}"
+  compile "${libraries.rxJavaAdapter}"
+  compile "${libraries.converterGson}"
+  compile "${libraries.okhttp}"
+  compile "${libraries.loggingInterceptor}"
+
+  testCompile "${libraries.junit}"
+
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
 }
