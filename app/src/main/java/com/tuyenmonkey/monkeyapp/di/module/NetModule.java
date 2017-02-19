@@ -2,6 +2,8 @@ package com.tuyenmonkey.monkeyapp.di.module;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.tuyenmonkey.monkeyapp.BuildConfig;
+import com.tuyenmonkey.monkeyapp.api.GitHubClient;
+import com.tuyenmonkey.monkeyapp.api.GitHubService;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
@@ -39,5 +41,17 @@ public class NetModule {
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttp.build())
         .build();
+  }
+
+  @Singleton
+  @Provides
+  GitHubService provideGitHubService(Retrofit retrofit) {
+    return retrofit.create(GitHubService.class);
+  }
+
+  @Singleton
+  @Provides
+  GitHubClient provideGitHubClient(GitHubService gitHubService) {
+    return new GitHubClient(gitHubService);
   }
 }

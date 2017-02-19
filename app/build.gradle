@@ -28,10 +28,12 @@ android {
   productFlavors {
     dev {
       applicationId "com.tuyenmonkey.monkeyapp.dev"
+      buildConfigField 'String', 'GITHUB_API', '"https://api.github.com/"'
     }
 
     prod {
       applicationId "com.tuyenmonkey.monkeyapp"
+      buildConfigField 'String', 'GITHUB_API', '"https://api.github.com/"'
     }
   }
 }
