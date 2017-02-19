@@ -1,19 +1,20 @@
 ext {
   version = [
-      androidSupport: "25.1.0",
+      appCompat: "25.1.0",
+
       dagger: "2.8",
       javaxAnnotation: "1.0",
       butterknife: "8.5.1",
       reactiveX: "2.0.1",
-      retrofit: "2.1.0",
-      okhttp: "3.6.0",
+      retrofit2: "2.1.0",
+      okhttp3: "3.6.0",
       rxJavaAdapter2: "1.0.0",
 
       junit: "4.12"
   ]
 
   libraries = [
-      appCompat: "com.android.support:appcompat-v7:${version.androidSupport}",
+      appCompat: "com.android.support:appcompat-v7:${version.appCompat}",
 
       dagger: "com.google.dagger:dagger:${version.dagger}",
       daggerCompiler: "com.google.dagger:dagger-compiler:${version.dagger}",
@@ -25,11 +26,11 @@ ext {
       rxJava: "io.reactivex.rxjava2:rxjava:${version.reactiveX}",
       rxAndroid: "io.reactivex.rxjava2:rxandroid:${version.reactiveX}",
 
-      retrofit: "com.squareup.retrofit2:retrofit:${version.retrofit}",
-      converterGson: "com.squareup.retrofit2:converter-gson:${version.retrofit}",
+      retrofit2: "com.squareup.retrofit2:retrofit:${version.retrofit2}",
+      converterGson: "com.squareup.retrofit2:converter-gson:${version.retrofit2}",
       rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${version.rxJavaAdapter2}",
-      okhttp: "com.squareup.okhttp3:okhttp:${version.okhttp}",
-      loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${version.okhttp}",
+      okhttp3: "com.squareup.okhttp3:okhttp:${version.okhttp3}",
+      loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${version.okhttp3}",
 
       junit: "junit:junit:${version.junit}"
   ]

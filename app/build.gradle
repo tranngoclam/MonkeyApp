@@ -36,10 +36,10 @@ dependencies {
   compile "${libraries.rxJava}"
   compile "${libraries.rxAndroid}"
 
-  compile "${libraries.retrofit}"
+  compile "${libraries.retrofit2}"
   compile "${libraries.rxJavaAdapter}"
   compile "${libraries.converterGson}"
-  compile "${libraries.okhttp}"
+  compile "${libraries.okhttp3}"
   compile "${libraries.loggingInterceptor}"
 
   testCompile "${libraries.junit}"
